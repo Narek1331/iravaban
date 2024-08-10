@@ -1,0 +1,152 @@
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: auto;
+}
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+.image-container img.active {
+    opacity: 1;
+}
+.image-container a {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+/* Additional styles */
+.services_section {
+    padding: 3rem 0;
+}
+.services_section_2 {
+    padding: 2rem 0;
+}
+.service_box {
+    text-align: center;
+    padding: 1rem;
+}
+.house_icon img {
+    max-width: 100px;
+}
+.readmore_button a {
+    text-decoration: none;
+}
+.readmore_button a:hover {
+    text-decoration: underline;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #c0bb91;
+    border-radius: 30%;
+}
+.module-container {
+    padding: 0 40px;
+    padding-bottom: 2vh;
+}
+.module-container img {
+    max-width: 100%;
+    height: auto;
+}
+.module-divider {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 6.3vh;
+}
+.module-logo img {
+    max-width: 140px;
+}
+.text-gold {
+    color: #c0bb91 !important;
+}
+.text-gold:hover {
+    color: #4f3c21 !important;
+}
+.bg-gold {
+    background-color: #c0bb91 !important;
+}
+.btn-gold {
+    background-color: #c0bb91 !important;
+    color: #fff !important;
+    border: 1px solid #a07b50 !important;
+    padding: 10px 20px !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: background-color 0.3s ease !important;
+}
+.btn-gold:hover {
+    background-color: #a07b50 !important;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.accordion-button.collapsed {
+    background: #c0bb91!important
+  }
+
+.accordion-button {
+background: #c0bb91!important
+}
+
+.accordion-button {
+    background-color: #c0bb91!important;
+    color: white;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: #c0bb91!important;
+    color: white;
+  }
+
+  .accordion-body {
+    background-color: #c0bb91!important;
+  }
+
+.nav-active{
+    color: #563a0f!important;
+
+}
+
+.social-icons a {
+    /* display: block; */
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.social-icons a:hover {
+    color: #ddd; /* Light color for hover effect */
+}
+
+.social-icons i {
+    font-size: 2rem; /* Adjust size as needed */
+}
