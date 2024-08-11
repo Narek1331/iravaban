@@ -39,6 +39,7 @@ class ServiceSeeder extends Seeder
         $services = [
             [
                 'type' => 'legal',
+                'img_path' => 'https://wallpapers.com/images/hd/lawyer-symbol-igym84n6b8nq04ob.jpg',
                 'data' => [
                     'am' => [
                         'title' => 'Հասարակական իրավունք',
@@ -56,6 +57,7 @@ class ServiceSeeder extends Seeder
             ],
             [
                 'type' => 'legal',
+                'img_path' => 'https://w0.peakpx.com/wallpaper/921/717/HD-wallpaper-law-law-and-order-lawyer.jpg',
                 'data' => [
                     'am' => [
                         'title' => 'Կորպորատիվ իրավունք',
@@ -73,6 +75,7 @@ class ServiceSeeder extends Seeder
             ],
             [
                 'type' => 'legal',
+                'img_path' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSayiCwcdcRylzJoq7cipp7WCwqXa_FST3Lzw&s',
                 'data' => [
                     'am' => [
                         'title' => 'Պայմանագրային իրավունք',
@@ -90,6 +93,7 @@ class ServiceSeeder extends Seeder
             ],
             [
                 'type' => 'legal',
+                'img_path' => 'https://cdn.wallpapersafari.com/33/15/G9sieC.jpg',
                 'data' => [
                     'am' => [
                         'title' => 'Ընտանեկան իրավունք',
@@ -107,6 +111,7 @@ class ServiceSeeder extends Seeder
             ],
             [
                 'type' => 'legal',
+                'img_path' => 'https://blog.lifebacklaw.com/hubfs/shutterstock_2121960653.jpg',
                 'data' => [
                     'am' => [
                         'title' => 'Քրեական իրավունք',
@@ -121,42 +126,7 @@ class ServiceSeeder extends Seeder
                         'description' => 'We offer defense in criminal cases, including court proceedings, defense against charges, and appeals of sentences.',
                     ],
                 ],
-            ],
-            [
-                'type' => 'mediator',
-                'data' => [
-                    'am' => [
-                        'title' => 'Միջնորդություն',
-                        'description' => 'Միջնորդությունը կարող է լինել հզոր գործիք կարգավորման համար, որտեղ երկու կողմերը չեն կարողանում համաձայնության գալ: Մեր փորձառու միջնորդները կարող են օգնել ձեզ գտնել փոխադարձաբար ընդունելի լուծումներ: Միջնորդությունը համարվում է ավելի շատ գին հասանելի, արագ և պարզ մեթոդ է տարաձայնությունների լուծման համար, քան դատվական գործընթացները: Մենք տրամադրում ենք միջնորդական ծառայություններ տարբեր բնագավառներում, ներառյալ ընտանեկան հարաբերությունները, գործարար վեճերը, աշխատավարձերի վիճակագրությունը և այլ ոլորտներ: Միջնորդի դերը կայանում է այն բանում, որ նա անկախ երրորդ կողմ է, ով օգնում է կողմերին հասնել համաձայնության: Միջնորդության գործընթացը կարող է ներառել բազմաթիվ փուլեր, որոնց ընթացքում մենք կազմակերպում ենք հանդիպումներ, քննարկումներ և բանակցություններ կողմերի միջև, որպեսզի հասնենք փոխադարձապես ընդունելի լուծում: Մեր մասնագետները ունեն լայն փորձություն միջնորդության ոլորտում և կարող են ապահովել, որ գործընթացը ընթանա նրբորեն և արդյունավետ:',
-                    ],
-                    'ru' => [
-                        'title' => 'Медиация',
-                        'description' => 'Медиация может быть мощным инструментом для урегулирования, когда две стороны не могут достичь соглашения. Медиация рассматривается как более доступный, быстрый и простой метод разрешения споров по сравнению с судебными процессами. Мы предоставляем услуги медиации в различных областях, включая семейные отношения, бизнес-споры, трудовые конфликты и другие области. Роль медиатора заключается в том, чтобы быть независимой третьей стороной, которая помогает сторонам достичь соглашения. Процесс медиации может включать несколько этапов, в течение которых мы организуем встречи, обсуждения и переговоры между сторонами, чтобы прийти к взаимоприемлемому решению. Наши специалисты имеют большой опыт в области медиации и могут обеспечить, чтобы процесс шел гладко и эффективно.',
-                    ],
-                    'en' => [
-                        'title' => 'Mediation',
-                        'description' => 'Mediation can be a powerful tool for resolving disputes when parties cannot reach an agreement. Mediation is considered a more cost-effective, quicker, and simpler method of dispute resolution compared to litigation. We provide mediation services in various areas, including family relations, business disputes, employment conflicts, and other domains. The role of a mediator is to act as an independent third party who helps the parties reach a resolution. The mediation process may involve several stages, during which we organize meetings, discussions, and negotiations between the parties to achieve a mutually acceptable solution. Our experts have extensive experience in mediation and can ensure that the process proceeds smoothly and effectively.',
-                    ],
-                ],
-            ],
-            [
-                'type' => 'pro-bono-free-legal-aid',
-                'img_path' => 'https://blog.lifebacklaw.com/hubfs/shutterstock_2121960653.jpg',
-                'data' => [
-                    'am' => [
-                        'title' => 'Անվճար իրավաբանական օգնություն (PRO BONO)',
-                        'description' => 'Մեր ընկերությունը հավատում է արդարության մատչելիությանը բոլորի համար և տրամադրում է անվճար իրավաբանական օգնություն նրանց, ովքեր չունեն բավարար միջոցներ վճարելու մեր ծառայությունների համար:',
-                    ],
-                    'ru' => [
-                        'title' => 'Бесплатная юридическая помощь (PRO BONO)',
-                        'description' => 'Наша фирма верит в доступность справедливости для всех и предоставляет бесплатную юридическую помощь тем, кто не имеет достаточных средств для оплаты наших услуг.',
-                    ],
-                    'en' => [
-                        'title' => 'Free Legal Aid (PRO BONO)',
-                        'description' => 'Our firm believes in access to justice for all and offers free legal aid to those who lack the financial means to pay for our services.',
-                    ],
-                ],
-            ],
+            ]
         ];
 
         foreach($services as $service)

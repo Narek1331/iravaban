@@ -1,4 +1,8 @@
 
+html,body{
+    background-color: #4f3c21!important;
+}
+
 .image-container {
     position: relative;
     width: 100%;
@@ -75,8 +79,11 @@
 .text-gold {
     color: #c0bb91 !important;
 }
+.text-gold-no-hover {
+    color: #c0bb91 !important;
+}
 .text-gold:hover {
-    color: #4f3c21 !important;
+    color: white !important;
 }
 .bg-gold {
     background-color: #c0bb91 !important;
@@ -95,7 +102,7 @@
     transition: background-color 0.3s ease !important;
 }
 .btn-gold:hover {
-    background-color: #a07b50 !important;
+    background-color: white !important;
 }
 
 .nav-item:hover .dropdown-menu {
@@ -110,43 +117,47 @@
 }
 
 .accordion-button.collapsed {
-    background: #c0bb91!important
+    background: #4f3c21!important
   }
 
 .accordion-button {
-background: #c0bb91!important
+    background: #4f3c21!important
 }
 
 .accordion-button {
-    background-color: #c0bb91!important;
+    background-color: #4f3c21!important;
     color: white;
   }
 
   .accordion-button:not(.collapsed) {
-    background-color: #c0bb91!important;
+    background-color: #4f3c21!important;
     color: white;
   }
 
   .accordion-body {
-    background-color: #c0bb91!important;
+    background-color: #4f3c21!important;
   }
 
 .nav-active{
-    color: #563a0f!important;
+    color: white!important;
 
 }
 
 .social-icons a {
     /* display: block; */
-    color: white;
+    color: #c0bb91;
     text-decoration: none;
     margin-right: 10px;
 }
 
 .social-icons a:hover {
-    color: #ddd; /* Light color for hover effect */
+    color: #c0bb91; /* Light color for hover effect */
 }
 
 .social-icons i {
     font-size: 2rem; /* Adjust size as needed */
+}
+
+.bg-brown {
+    background-color: #4f3c21!important
 }

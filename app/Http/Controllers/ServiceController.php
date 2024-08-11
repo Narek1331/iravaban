@@ -33,4 +33,10 @@ class ServiceController extends Controller
 
         return view("services.mediator",compact("mediatorService"));
     }
+
+    public function show($id)
+    {
+        $service = $this->serviceService->getServiceById($id);
+        return view("services.show",compact("service"));
+    }
 }

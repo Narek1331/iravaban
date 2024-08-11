@@ -41,7 +41,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav style="background-color: #4f3c21!important" class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="/">
                 <img src="/images/logos/main.png" alt="Logo" width="60" height="60" class="d-inline-block align-top">
@@ -58,13 +58,24 @@
                         <a class="nav-link text-gold {{ request()->routeIs('about') ? 'nav-active' : '' }}" href="{{route('about')}}">{{__('main.About Us')}}</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-gold {{ in_array(request()->route()->getName(), ['service.legal','service.pro-bono','service.mediator']) ? 'nav-active' : '' }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-gold {{ in_array(request()->route()->getName(), ['service.index','service.pro-bono','service.mediator']) ? 'nav-active' : '' }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{__('main.Services')}}
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-gold {{ request()->routeIs('service.legal') ? 'nav-active' : '' }}" href="{{route('service.legal')}}">{{__('main.Legal Services')}}</a></li>
-                            <li><a class="dropdown-item text-gold {{ request()->routeIs('service.pro-bono') ? 'nav-active' : '' }}" href="{{route('service.pro-bono')}}">{{__('main.PRO BONO / Free Legal Aid')}}</a></li>
-                            <li><a class="dropdown-item text-gold {{ request()->routeIs('service.mediator') ? 'nav-active' : '' }}" href="{{route('service.mediator')}}">{{__('main.Mediator')}}</a></li>
+                        <ul class="dropdown-menu text-gold-no-hover " style="background-color: #4f3c21!important" aria-labelledby="navbarDropdown">
+                            @if(isset($services) && $services->count())
+
+                                @foreach ($services as $service)
+                                @php
+                                    $serviceData = $service->languages()->where('slug', app()->getLocale())->first();
+                                @endphp
+                                    <li>
+                                        <a style="text-decoration: none !important;" class="dropdown-item text-gold-no-hover {{request()->route()->getName() === 'service.show' && request()->route('id') == $service->id ? 'nav-active' : '' }}" href="{{route('service.show',['id'=>$service->id])}}">
+                                            {{$serviceData['pivot']['title']}}
+                                        </a>
+                                    </li>
+                                @endforeach
+                            @endif
+
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -74,11 +85,11 @@
                         <a class="nav-link text-gold" href="{{route('about')}}">Pricing</a>
                     </li> --}}
                 </ul>
-                <div class="d-flex">
+                <div class="d-flex" style="background-color: #4f3c21!important">
                     @if(isset($languages) && $languages->count())
                         <form method="POST" action="{{ route('change.language') }}">
                             @csrf
-                            <select name="language" class="form-select" onchange="this.form.submit()">
+                            <select style="background-color: #4f3c21!important" name="language" class="form-select border-0" onchange="this.form.submit()">
                                 @foreach ($languages as $language)
                                     <option value="{{ $language->slug }}" {{ app()->getLocale() == $language->slug ? 'selected' : '' }}>
                                         {{ $language->flag }}
@@ -97,7 +108,7 @@
 
 
 
-    <footer class="bg-dark text-center text-lg-start text-white">
+    <footer class="bg-dark text-center text-lg-start text-gold-no-hover">
         <div class="container p-5">
             <div class="d-flex justify-content-between flex-wrap">
                 <div class="mb-6">
@@ -122,7 +133,7 @@
                         <span class="visually-hidden">Telegram</span>
                     </a>
                     <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i  class="fab fa-linkedin-in"></i>
                         <span class="visually-hidden">LinkedIn</span>
                     </a>
                 </div>

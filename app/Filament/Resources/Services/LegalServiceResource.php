@@ -35,17 +35,21 @@ class LegalServiceResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-list-bullet';
 
-    protected static ?string $navigationLabel = 'Legal Services';
+    protected static ?string $navigationLabel = 'Services';
 
-    protected static ?string $navigationGroup = 'Services';
+    // protected static ?string $navigationGroup = 'Services';
 
-    protected static ?string $pluralLabel = 'Legal Services';
+    // protected static ?string $pluralLabel = 'Legal Services';
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Card::make()
                     ->schema([
+                        FileUpload::make('img_path')
+                        // ->directory()
+                        ->label('Image')
+                        ->acceptedFileTypes(['image/svg', 'image/png', 'image/jpeg', 'image/jpg', 'image/gif']),
                     Repeater::make('Languages')
                         ->relationship('languages')
                         ->schema([

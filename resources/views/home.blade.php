@@ -7,7 +7,7 @@
         @foreach ($banners as $index => $banner)
         <img src="/storage/{{$banner->img_path}}" alt="Placeholder Image" @if($index == 0) class="active" @endif>
         @endforeach
-        <a href="https://calendly.com/test1212012/30min" target="_blank">{{__('main.Get An Pppointment')}}</a>
+        <a class="text-gold-no-hover" href="https://calendly.com/iravaban-info/30min" target="_blank">{{__('main.Get An Pppointment')}}</a>
     </div>
 @endif
 
@@ -63,27 +63,27 @@
 <div class="container mt-4">
     @if ($ourVisionPage && $ourVisionData = $ourVisionPage->languages()->where('slug',app()->getLocale())->first())
     <div class="row mb-0" style="background: rgb(185, 139, 115);">
-        <div class="col-sm-6 d-flex align-items-start p-2" style="background: #FFFFFF;">
+        <div style="" class="bg-brown col-sm-6 d-flex align-items-start p-2" style="background: #FFFFFF;">
             <div class="module-container text-center">
                 <div class="module-image">
                     <img src="/storage/{{$ourVisionPage->img_path}}" alt="">
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 d-flex flex-column justify-content-center p-2" style="background: #FFFFFF;">
+        <div style="" class="bg-brown col-sm-6 d-flex flex-column justify-content-center p-2" style="background: #FFFFFF;">
             <div class="module-container">
-                <h2 style="font-size: 38px" class="text-gold">
+                <h2 style="font-size: 38px" class="text-gold-no-hover">
                     {{__('main.Our Vision')}}
                 </h2>
             </div>
             <div class="module-container">
-                <p style="font-size: 16px;">
+                <p style="font-size: 16px; color:" class="text-gold-no-hover">
                     {{$ourVisionData['pivot']['description']}}
                 </p>
             </div>
             <div class="module-divider"></div>
 
-            <div class="module-container">
+            <div class="module-container text-gold-no-hover">
                 <h5>{{__('main.Address')}}: {{__('contact.address')}}</h5>
                 <h5>{{__('main.Phone Number')}}: {{__('contact.phone')}}</h5>
                 <h5>{{__('main.email')}}: {{__('contact.email')}}</h5>
@@ -104,7 +104,7 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="display-4 text-gold">{{__('main.Services')}}</h1>
+                    <h1 class="display-4 text-gold-no-hover">{{__('main.Services')}}</h1>
                 </div>
             </div>
         </div>
@@ -124,10 +124,10 @@
                                     <div class="col-md-4">
                                         <div class="service_box">
                                             <div class="house_icon"></div>
-                                            <h3 class="h5">{{ $legalServiceData['pivot']['title'] }}</h3>
-                                            <p class="text-truncate">{{ $legalServiceData['pivot']['description'] }}</p>
+                                            <h3 class="h5 text-gold-no-hover">{{ $legalServiceData['pivot']['title'] }}</h3>
+                                            <p class="text-truncate text-gold-no-hover">{{ $legalServiceData['pivot']['description'] }}</p>
                                             <div class="readmore_button">
-                                                <a href="{{route('service.legal')}}" class="btn text-gold">{{__('main.Read More')}}</a>
+                                                <a href="{{route('service.show',['id'=>$legalService->id])}}" class="btn text-gold-no-hover">{{__('main.Read More')}}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -161,11 +161,11 @@
         </div>
         <div class="col-md-6 d-flex flex-column justify-content-center">
           <div class="about_text_main">
-            <h1 class="about_taital display-4 mb-3 text-gold">{{__('main.About Us')}}</h1>
-            <p class="about_text lead">
+            <h1 class="about_taital display-4 mb-3 text-gold-no-hover">{{__('main.About Us')}}</h1>
+            <p class="about_text text-truncate lead text-gold-no-hover">
                 {{$aboutData['pivot']['description']}}
             </p>
-            <a href="{{route('about')}}" class="btn text-gold mt-3">{{__('main.Read More')}}</a>
+            <a href="{{route('about')}}" class="btn text-gold-no-hover mt-3">{{__('main.Read More')}}</a>
           </div>
         </div>
       </div>
@@ -181,26 +181,26 @@
                     <canvas id="chart1"></canvas>
                     {{-- <div class="chart-percentage">99%</div> --}}
                 </div>
-                <p><a class="btn btn-custom " >{{__('main.Experienced Legal Expertise')}}</a></p>
+                <p><a class="btn btn-custom text-gold-no-hover" >{{__('main.Experienced Legal Expertise')}}</a></p>
             </div>
             <div class="col-6 col-md-3 mb-4">
                 <div class="chart-container">
                     <canvas id="chart2"></canvas>
                     {{-- <div class="chart-percentage">99%</div> --}}
                 </div>
-                <p><a class="btn btn-custom " >{{__('main.Personalized Legal Solutions')}}</a></p>
+                <p><a class="btn btn-custom text-gold-no-hover" >{{__('main.Personalized Legal Solutions')}}</a></p>
             </div>
             <div class="col-6 col-md-3 mb-4">
                 <div class="chart-container">
                     <canvas id="chart3"></canvas>
                 </div>
-                <p><a class="btn btn-custom " >{{__('main.Transparent Communication')}}</a></p>
+                <p><a class="btn btn-custom text-gold-no-hover" >{{__('main.Transparent Communication')}}</a></p>
             </div>
             <div class="col-6 col-md-3 mb-4">
                 <div class="chart-container">
                     <canvas id="chart4"></canvas>
                 </div>
-                <p><a class="btn btn-custom " >{{__('main.Client-Centered Approach')}}</a></p>
+                <p><a class="btn btn-custom text-gold-no-hover" >{{__('main.Client-Centered Approach')}}</a></p>
             </div>
         </div>
     </section>

@@ -171,7 +171,7 @@ return [
     'Transparent Communication' => 'Թափանցիկ հաղորդակցություն',
     'Client-Centered Approach' => 'Հաճախորդ-կենտրոնացված մոտեցում',
     'Feedback submitted successfully' => 'Հետադարձ կապը հաջողությամբ ուղարկվեց',
-    'Get An Pppointment' => 'Ստացեք հանդիպում',
+    'Get An Pppointment' => 'Ամրագրել հանդիպում',
     'page_not_fount_title' => 'Էջը չի գտնվել',
     'page_not_fount_description' => 'Վերադարձ դեպի գլխավոր էջ',
 

@@ -12,13 +12,13 @@
                 @endphp
                 <div class="accordion-item">
                 <h2 class="accordion-header" id="heading{{$index}}">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">
+                    <button class="accordion-button text-gold-no-hover" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">
                         {{$legalServiceData['pivot']['title']}}
                     </button>
                 </h2>
                 <div id="collapse{{$index}}" class="accordion-collapse collapse" aria-labelledby="heading{{$index}}" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                    <strong>
+                    <strong class="text-gold-no-hover">
                         {{$legalServiceData['pivot']['description']}}
                     </strong>
                     </div>

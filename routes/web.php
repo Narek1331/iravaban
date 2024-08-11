@@ -19,9 +19,10 @@ Route::get("/about", [AboutController::class,"index"])->name("about");
 Route::get("/contact", [ContactController::class,"index"])->name("contact");
 
 Route::group(['prefix'=>'service'], function () {
-    Route::get('/legal', [ServiceController::class, 'legal'])->name('service.legal');
-    Route::get('/pro-bono', [ServiceController::class, 'proBono'])->name('service.pro-bono');
-    Route::get('/mediator', [ServiceController::class, 'mediator'])->name('service.mediator');
+    Route::get('/', [ServiceController::class, 'legal'])->name('service.index');
+    Route::get('/{id}', [ServiceController::class, 'show'])->name('service.show');
+    // Route::get('/pro-bono', [ServiceController::class, 'proBono'])->name('service.pro-bono');
+    // Route::get('/mediator', [ServiceController::class, 'mediator'])->name('service.mediator');
 });
 
 Route::group(['prefix'=>'feedback'], function () {
